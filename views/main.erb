@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Address To Geohex Converter</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <%= yield %>
+  <div class= "row">
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <a class='navbar-brand'>
+          <img src="/logo.png" class="logo">
+        </a>
+      </div>
+    </nav>
+  </div>
+
+<div id= "page">
+  <div id= "title">
+    <h1>Address To Geohex Converter</h1>
+  </div>
+
+  <div class= "container-fluid col-md-6">
+    <div class= "form-group">
+      <h4>Select Input CSV File</h4>
+        <form action="/show" class="form-control" method="post" enctype='multipart/form-data'/>
+    </div>
+
+
+    <div class= "form-group">
+      <form action="/show" method="post">
+        <input type="submit" class="btn btn-primary btn-lg">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

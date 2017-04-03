@@ -1,13 +1,15 @@
+# require 'sinatra/activerecord'
+# require './config/environments' #database configuration
 require 'sinatra'
 
 
 get '/' do
-  erb :index
+  erb :index, layout: :main
 end
 
 
-get '/about' do
-  'A little about me.'
+get '/show' do
+  erb :show, layout: :main
 end
 
 

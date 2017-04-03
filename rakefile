@@ -1,0 +1,2 @@
+require '/geohex'
+# require 'sinatra/activerecord/rake'

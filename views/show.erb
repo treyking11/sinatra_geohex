@@ -1,0 +1,24 @@
+<div id="show">
+  <div id= "title">
+    <h1>Conversion Successfully Finished!</h1>
+  </div>
+
+<div class= "container-fluid col-xs-12">
+  <div class= "form-group">
+    <h3>Please Download, Complete, And Attach The Following Documents To Your Submission Email</h3>
+  </div>
+  <div class= "form-group">
+    <h4>Required Documents</h4>
+  </div>
+
+  <div class= "form-group">
+    <label class="form-check-label">
+      Download Your Campaign Information As CSV
+    </label>
+    <div>
+      <%= link_to 'Download Geohex Data', entry_path(@entry.id, format: :csv), class: "btn btn-primary btn-lg"%>
+    </div>
+  </div>
+
+</div>
+</div>
