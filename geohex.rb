@@ -22,3 +22,15 @@ not_found do
   status 404
   'Trey broke this...'
 end
+
+post '/save_file' do
+  @filename = params[:file][:filename]
+  file = params[:file][:tempfile]
+
+  File.open(".public/#{@filename}", 'wb') do |f|
+    f.write(file.read)
+  end
+
+  erb :show
+
+end

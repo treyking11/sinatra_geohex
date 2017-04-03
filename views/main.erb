@@ -28,14 +28,10 @@
   <div class= "container-fluid col-md-6">
     <div class= "form-group">
       <h4>Select Input CSV File</h4>
-        <form action="/show" class="form-control" method="post" enctype='multipart/form-data'/>
-    </div>
+        <form action="/show" method="post"/>
+          <input type= "file" name = "file" class="form-control btn btn-primary btn-md" method="post"     enctype='multipart/form-data'/>
+          <input type="submit" class="btn btn-primary btn-lg"/>
 
-
-    <div class= "form-group">
-      <form action="/show" method="post">
-        <input type="submit" class="btn btn-primary btn-lg">
-      </form>
     </div>
   </div>
 </div>
