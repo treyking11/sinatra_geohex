@@ -23,6 +23,7 @@ not_found do
   'Trey broke this...'
 end
 
+
 post '/save_file' do
   @filename = params[:file][:filename]
   file = params[:file][:tempfile]
@@ -30,7 +31,11 @@ post '/save_file' do
   File.open(".public/#{@filename}", 'wb') do |f|
     f.write(file.read)
   end
+end
 
-  erb :show
 
+post '/run_script' do
+  load '/get-GH-from-address.rb'
+  #system("./script.sh") ''
+  erb :show, layout: :main
 end
