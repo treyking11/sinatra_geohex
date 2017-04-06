@@ -1,5 +1,6 @@
 
 gem "sinatra"
-gem "active_record"
+gem "activerecord"
 gem "sinatra-activerecord"
 gem "pg"
+gem "tempfile"

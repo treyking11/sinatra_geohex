@@ -1,6 +1,8 @@
 # require 'sinatra/activerecord'
 # require './config/environments' #database configuration
 require 'sinatra'
+require 'CSV'
+require 'tempfile'
 
 
 get '/' do
@@ -23,15 +25,20 @@ not_found do
   'Trey broke this...'
 end
 
-
-post '/save_file' do
-  @filename = params[:file][:filename]
-  file = params[:file][:tempfile]
-
-  File.open(".public/#{@filename}", 'wb') do |f|
-    f.write(file.read)
-  end
+post '/upload' do
+  @content = CSV.read('look_back_addresses.csv').to_s
+  erb :index, layout: :main
+  return @content
 end
+
+
+# post "/upload" do
+#   File.open(params[:file][:filename], "w") do |f|
+#     f.write(params[:file][:tempfile].read)
+#   end
+#   return "success"
+# end
+
 
 
 post '/run_script' do
