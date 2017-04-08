@@ -27,9 +27,16 @@ end
 
 post '/upload' do
   $filename = params[:filename]
-  content = CSV.read($filename).to_s
+  $csv_input_data = CSV.read($filename).to_s
+  # return $csv_input_data
 
-  return content
+  csv_data = []
+  csv_input_data.each do |row|
+    row_as_hash = Hash[*csv_input_headers.zip(row).flatten]
+    csv_row_with_ll = geocode_merchant(row_as_hash)
+    x = csv_data.push(csv_row_with_ll)
+    return x
+  end
 
 end
 

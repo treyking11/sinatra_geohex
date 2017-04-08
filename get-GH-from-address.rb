@@ -163,26 +163,26 @@ end
 #  Begin Script
 #######################################################
 
-$filename = ARGV[0]
+# $filename = ARGV[0]
 
 $basefile = File.basename($filename,File.extname($filename))
 
-puts ""
-puts "Initializing Address to LLR to GH process for #{$filename}"
-puts ""
-puts "..."
-puts ""
+# puts ""
+# puts "Initializing Address to LLR to GH process for #{$filename}"
+# puts ""
+# puts "..."
+# puts ""
 
-#Reads Filename (given in command)
-csv_input_data = CSV.read($filename)
-csv_input_headers = csv_input_data.shift.map { |i| i.to_s }
+# #Reads Filename (given in command)
+# @csv_input_data = CSV.read($filename)
+# @csv_input_headers = @csv_input_data.shift.map { |i| i.to_s }
 
 # Creates array for returned values
 csv_data = []
-
-  puts ""
-  puts "Input addresses and radii for #{$basefile}:"
-  puts "--------------------------------------------------------------"
+  #
+  # puts ""
+  # puts "Input addresses and radii for #{$basefile}:"
+  # puts "--------------------------------------------------------------"
 
 # Ingests input data and outputs address + lat/long + radius to csv_data array
 csv_input_data.each do |row|
