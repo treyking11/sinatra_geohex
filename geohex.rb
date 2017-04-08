@@ -26,11 +26,11 @@ not_found do
 end
 
 post '/upload' do
-  @content = CSV.read('look_back_addresses.csv').to_s
-  # erb :index, layout: :main
-  # csv_input_data = CSV.read($filename)
-  # return csv_input_data
-  return @content
+  $filename = params[:filename]
+  content = CSV.read($filename).to_s
+
+  return content
+
 end
 
 

@@ -2,6 +2,8 @@ require_relative "connection"
 
 class Entry < ActiveRecord::Base
 
+
+
   #  Method to export lat/long and radius
   def create_csv_for_LLR(csv_data)
 
@@ -26,6 +28,13 @@ class Entry < ActiveRecord::Base
        end
      end
   end
+
+
+
+
+
+
+
 
 
 end
